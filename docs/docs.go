@@ -32,6 +32,9 @@ type Config struct {
 	// Subtitle of the site.
 	Subtitle string
 
+	// Footer of the site.
+	Footer string
+
 	// Theme name.
 	Theme string
 

@@ -21,6 +21,7 @@ func main() {
 	app.Example("static-docs --title Up --in ../up/docs -out .", "Generate a site in ./ from ../up/docs/*.md")
 	title := app.Flag("title", "Site title.").String()
 	subtitle := app.Flag("subtitle", "Site subtitle or slogan.").String()
+	footer := app.Flag("footer", "Site footer.").String()
 	theme := app.Flag("theme", "Theme name.").Default("apex").String()
 	src := app.Flag("in", "Source directory for markdown files.").Default(".").String()
 	dst := app.Flag("out", "Output directory for the static site.").Default("build").String()
@@ -38,6 +39,7 @@ func main() {
 		Dst:      *dst,
 		Title:    *title,
 		Subtitle: *subtitle,
+		Footer:   *footer,
 		Theme:    *theme,
 		Segment:  *segment,
 		Google:   *google,
